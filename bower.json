@@ -1,0 +1,20 @@
+{
+  "name": "RAM Simulator",
+  "version": "0.0.0",
+  "homepage": "https://github.com/lkdl/RAM",
+  "authors": [
+    "Luca Keidel <luca.keidel@fu-berlin.de>"
+  ],
+  "description": "A browser based RAM simulator",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "latest",
+    "jquery": "latest",
+    "fontawesome": "latest",
+    "ace": "latest",
+    "angular": "latest",
+    "angular-bootstrap": "latest",
+    "jquery-cookie": "latest",
+    "js-md5": "latest"
+  }
+}

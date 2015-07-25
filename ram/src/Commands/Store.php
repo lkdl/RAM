@@ -1,10 +1,8 @@
 <?php
 
-namespace RAM\Commands;
+namespace Commands;
 
-use \RAM\Commands\Command;
-
-class Store extends \RAM\Commands\Command{
+class Store extends \Commands\Command{
 
 	private $op;
 
@@ -12,11 +10,11 @@ class Store extends \RAM\Commands\Command{
 		$this->op = $op;
 	}
 
-	public function execute(\RAM\Register $reg, \RAM\Cell $acc){
+	public function execute(\Components\Register $reg, \Components\Cell $acc){
 		
 		$op = $this->resolveIndex($this->op, $reg, $acc);
 		
-		if ($op['type'] == Command::LITERAL){
+		if ($op['type'] == \Commands\Command::LITERAL){
 			throw new \Exception('Cannot store into a literal');
 		}
 		

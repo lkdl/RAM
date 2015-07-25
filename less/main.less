@@ -1,0 +1,139 @@
+@import "bootstrap.less";
+
+#github-ribbon{
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+	z-index: 9999;
+	width:110px;
+	height:110px;
+}
+
+@media only screen and (max-width: 768px){
+	#github-ribbon{
+		display:none;
+	}
+}
+
+.main-container{
+	margin-top:50px;
+}
+
+#editor{ 
+	position: relative;
+	height:400px;
+	font-size:16px;
+}
+
+#editor-bar{
+	border-radius:5px 5px 0px 0px;
+	margin-bottom:0px;
+	border-bottom-width:0px;
+}
+
+#editor-bottom-bar{
+	border-radius:0px 0px 5px 5px;
+	margin-bottom:0px;
+	border-top-width:0px;
+}
+
+.ex-label{
+	margin-left:0px;
+}
+
+#editor-bar .collapse, #editor-bottom-bar .collapse{
+	padding-left:0px;
+}
+
+body{
+	background-color:#fbfbfb;
+}
+
+.intro-sec, .editor-sec{
+	margin-bottom:30px;
+}
+
+.logo{
+	padding-left:15px;
+	padding-top:2px;
+}
+
+/* Loading animation */
+
+.spinner {
+	margin: 100px auto;
+	width: 32px;
+	height: 32px;
+	position: relative;
+}
+
+.cube1, .cube2 {
+	background-color: #2980b9;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	-webkit-animation: cubemove 1.8s infinite ease-in-out;
+	animation: cubemove 1.8s infinite ease-in-out;
+}
+
+.cube2 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+
+@-webkit-keyframes cubemove {
+	25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+	50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+	75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+	100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes cubemove {
+	25% { 
+	transform: translateX(42px) rotate(-90deg) scale(0.5);
+	-webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+	} 50% { 
+	transform: translateX(42px) translateY(42px) rotate(-179deg);
+	-webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+	} 50.1% { 
+	transform: translateX(42px) translateY(42px) rotate(-180deg);
+	-webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+	} 75% { 
+	transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+	-webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+	} 100% { 
+	transform: rotate(-360deg);
+	-webkit-transform: rotate(-360deg);
+	}
+}
+
+
+#loading{
+	text-align:center;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-100px;
+	margin-top:-100px;
+	display:none;
+}
+
+#loading h1{
+	color: #2980b9;
+	font-size:18px;
+	text-shadow: 0px 0px 20px white;
+}
+
+.result-info{
+	text-align:right;
+	color: #357ebd;
+	font-style:italic;
+}
+
+h1{
+	font-size:20px;
+}

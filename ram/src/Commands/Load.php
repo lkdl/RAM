@@ -1,10 +1,9 @@
 <?php
 
-namespace RAM\Commands;
+namespace Commands;
 
-use \RAM\Commands\Command;
 
-class Load extends \RAM\Commands\Command{
+class Load extends \Commands\Command{
 
 	private $op;
 
@@ -12,7 +11,7 @@ class Load extends \RAM\Commands\Command{
 		$this->op = $op;
 	}
 
-	public function execute(\RAM\Register $reg, \RAM\Cell $acc){
+	public function execute(\Components\Register $reg, \Components\Cell $acc){
 		
 		$op = $this->resolve($this->op, $reg, $acc);
 		$acc->setValue($op['value']);

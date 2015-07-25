@@ -1,10 +1,8 @@
 <?php
 
-namespace RAM\Commands;
+namespace Commands;
 
-use \RAM\Commands\Command;
-
-class GotoCmd extends \RAM\Commands\Command{
+class GotoCmd extends \Commands\Command{
 
 	private $line;
 
@@ -12,7 +10,7 @@ class GotoCmd extends \RAM\Commands\Command{
 		$this->line = $line;
 	}
 
-	public function execute(\RAM\Register $reg, \RAM\Cell $acc){
+	public function execute(\Components\Register $reg, \Components\Cell $acc){
 		$line = $this->resolve($this->line, $reg, $acc);
 		return $line['value'];
 	}

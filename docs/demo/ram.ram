@@ -1,0 +1,9 @@
+LOAD 1
+
+ADD 2
+STORE 2
+
+LOAD 1
+SUB #1
+STORE 1
+IF A > #0 GOTO #2

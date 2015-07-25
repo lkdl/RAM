@@ -1,10 +1,8 @@
 <?php
 
-namespace RAM\Commands;
+namespace Commands;
 
-use \RAM\Commands\Command;
-
-class Div extends \RAM\Commands\Command{
+class Div extends \Commands\Command{
 
 	private $op;
 
@@ -12,9 +10,13 @@ class Div extends \RAM\Commands\Command{
 		$this->op = $op;
 	}
 
-	public function execute(\RAM\Register $reg, \RAM\Cell $acc){
+	public function execute(\Components\Register $reg, \Components\Cell $acc){
 	
 		$op = $this->resolve($this->op, $reg, $acc);
+
+		if($op['value'] == 0){
+			throw new \Exception('Division by zero');
+		}
 		
 		$acc->setValue(floor($acc->getValue() / $op['value']));
 

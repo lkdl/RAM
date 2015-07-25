@@ -1,0 +1,28 @@
+-- ******************************************************
+--                     FACTORIAL
+--
+-- Calculates the factorial of n:
+-- n! = n * (n-1) * ... * 1
+--
+-- Example: 5! = 5 * 4 * 3 * 2 * 1 = 120
+-- The input n is stored in R1, the result will be in R2
+-- ******************************************************
+
+-- store n (here 5) into R1
+LOAD #5
+STORE 1
+
+-- init R2 with 1
+LOAD #1
+STORE 2
+
+-- multiply R2 with R1...
+LOAD 2
+MULT 1
+STORE 2
+
+-- ...and decrement R1
+LOAD 1
+SUB #1
+STORE 1
+IF 1 > #0 GOTO #20

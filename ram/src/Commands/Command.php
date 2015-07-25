@@ -1,8 +1,8 @@
 <?php
 
-namespace RAM\Commands;
+namespace Commands;
 
-abstract class Command implements \RAM\Commands\ICommand{
+abstract class Command implements \Commands\ICommand{
 
 	const LITERAL = 0;
 	const REFERENCE = 1;
@@ -40,7 +40,7 @@ abstract class Command implements \RAM\Commands\ICommand{
 		return array('type' => $type, 'value' => intval($value));
 	}
 	
-	protected function resolveIndex($op, \RAM\Register $reg, \RAM\Cell $acc){
+	protected function resolveIndex($op, \Components\Register $reg, \Components\Cell $acc){
 		$op = $this->parseSymbol($op);
 	
 		$value = NULL;
@@ -70,7 +70,7 @@ abstract class Command implements \RAM\Commands\ICommand{
 		return array('type' => $type, 'value' => $value);
 	}
 	
-	protected function resolve($op, \RAM\Register $reg, \RAM\Cell $acc){
+	protected function resolve($op, \Components\Register $reg, \Components\Cell $acc){
 	
 		$op = $this->parseSymbol($op);
 	

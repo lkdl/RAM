@@ -1,10 +1,9 @@
 <?php
 
-namespace RAM\Commands;
+namespace Commands;
 
-use \RAM\Commands\Command;
 
-class IfCmd extends \RAM\Commands\Command{
+class IfCmd extends \Commands\Command{
 
 	private $op1;
 	private $op2;
@@ -19,7 +18,7 @@ class IfCmd extends \RAM\Commands\Command{
 		
 	}
 
-	public function execute(\RAM\Register $reg, \RAM\Cell $acc){
+	public function execute(\Components\Register $reg, \Components\Cell $acc){
 	
 		$op1 = $this->resolve($this->op1, $reg, $acc);
 		$op2 = $this->resolve($this->op2, $reg, $acc);

@@ -1,6 +1,6 @@
 <?php
 
-namespace RAM;
+namespace Components;
 
 class Register{
 	
@@ -9,7 +9,7 @@ class Register{
 	public function __construct($amount = 10){
 		$this->reg = array();
 		for($i = 0; $i < $amount; $i++){
-			$this->reg[] = new \RAM\Cell();
+			$this->reg[] = new \Components\Cell();
 		}
 	}
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace RAM;
+namespace Components;
 
 class Cell{
 	

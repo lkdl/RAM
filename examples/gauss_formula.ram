@@ -1,0 +1,31 @@
+-- ******************************************************
+--                   GAUSSIAN SUM FORMULA
+--
+-- Gauss discovered and proved the following equation:
+--
+--                   n   
+--                   ∑ i = (n*(n+1) / 2)
+--                  i=0
+--
+-- This example calculates the sum and not the closed
+-- form (this would be too easy). 
+--
+-- The input is stored in R1, the result is stored in R2.
+-- ******************************************************
+
+-- store input (n=5) into R1
+LOAD #5
+STORE 1
+
+-- load R1 (in the first iteration n)
+LOAD 1
+
+-- add it to R2
+ADD 2
+STORE 2
+
+-- and decrement R1
+LOAD 1
+SUB #1
+STORE 1
+IF A > #0 GOTO #21
